@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juliana Putra | Web Designer</title>
+    <link rel="shortcut icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -12,9 +13,9 @@
 
 <body class="" data-spy="scroll" data-target="#navbar">
 
-    <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-white fixed-top">
+    <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light fixed-top">
         <div class="container">
-            <a class="navbar-brand font-weight-bold" href="#top">{JP}</a>
+            <a class="navbar-brand font-weight-bold text-orange" href="#top">{JP}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -41,27 +42,27 @@
 
 
     <div data-spy="scroll" data-target="#navbar" data-offset="0">
-        <header id="top" class="pt-5">
+        <header id="top" class="bg-primary" style="z-index: -1;">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-5">
-                        <h6>HELLO, I'M JULIANA PUTRA</h6>
-                        <h1>FRONT-END<br>DEVELOPER</h1>
-                        <p>Saya akan membantu membuat tampilan website anda lebih bersih, rapi namun tetap terlihat
-                            indah</p>
-                        <a href="#portfolio" class="btn btn-warning">My Portfolio</a>
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <h6 class="text-orange">HELLO, I AM</h6>
+                        <h1 class="text-title">Juliana Putra</h1>
+                        <h3 class="text-title font-weight-bold">Front-End Developer</h3>
+                        <p class="text-body">Mahasiswa ilmu komputer yang siap membantu mengerjakan proyek website anda
+                            sepenuh hati.</p>
+                        <a href="#portfolio" class="btn btn-orange">My Portfolio</a>
                     </div>
-                    <div class="col-lg-5">
-                        <img class="mt-5 img-fluid hero-img" src="assets/img/profile.png" alt="" data-aos="fade-left">
+                    <div class="col-lg-5" data-aos="fade-left" data-aos-delay="500">
+                        <img class="mt-5 img-fluid hero-img" src="assets/img/profile.png" alt="">
                     </div>
                 </div>
             </div>
         </header>
 
-        <section id="services" class="bg-dark">
+        <section id="services" class="p-relative p-0">
             <div class="container">
-                <h4 class="text-center mb-5">Services</h4>
-                <div class="row justify-content-center">
+                <div class="row mx-1 py-4 px-3 border rounded bg-white service-box">
                     <div class="col-lg-4">
                         <div class="row">
                             <div class="col-4">
@@ -96,67 +97,92 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <section id="about" class="">
             <div class="container py-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 text-center">
-                        <img class="about-img img-fluid" src="assets/img/about.png" alt="" data-aos="flip-left">
+                <div class="row justify-content-around align-items-center">
+                    <div class="col-lg-4 text-center" data-aos="fade-right" data-aos-delay="500" data-aos-offset="0">
+                        <img class="about-img img-fluid mb-5" src="assets/img/about.png" alt="">
                     </div>
-                    <div class="col-lg-5">
-                        <h4>About Me</h4>
-                        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque alias atque fugit,
-                            ipsum nostrum quia repellat dolorum expedita vero commodi, voluptates officiis pariatur,
-                            facere recusandae quas exercitationem eveniet tenetur sapiente.</p>
-                        <button type="button" class="btn btn-warning">Show CV</button>
+                    <div class="col-lg-5" data-aos="fade-left" data-aos-offset="0">
+                        <h6 class="text-orange">ABOUT ME</h6>
+                        <h2 class="text-title font-weight-bold">Why You Should Choose Me?</h2>
+                        <p class="text-body py-4">
+                            Ketertarikan saya terhadap komputer dan teknologi muncul saat saya berusia 12 tahun, lalu
+                            design merupakan passion saya. Rasa ingin tahu yang tinggi menyebabkan saya selalu tertarik
+                            mempelajari teknologi-teknologi baru khususnya front-end developer.
+                            <br><br>
+                            Dengan bekerja sebagai front-end developer membuat saya merasa melakukan kegiatan favorit
+                            saya, sehingga saya akan melakukannya dengan sepenuh hati.
+                        </p>
+                        <a href="#portfolio" class="btn btn-orange">Show CV</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="portfolio" class="text-center bg-light">
+        <section id="portfolio" class="text-center bg-primary">
             <div class="container py-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <h4>My Portfolio</h4>
-                        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque alias atque fugit,
-                            ipsum nostrum quia repellat dolorum expedita vero commodi, voluptates officiis pariatur,
-                            facere recusandae quas exercitationem eveniet tenetur sapiente.</p>
-
+                        <h6 class="text-orange">MY PORTFOLIO</h6>
+                        <h2 class="text-title font-weight-bold mb-5">My Latest Work</h2>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-4">
-                        <img src="assets/img/p2.png" class="img-fluid">
+                        <img src="assets/img/p2.png" class="img-fluid shadow mb-3">
                     </div>
                     <div class="col-lg-4">
-                        <img src="assets/img/p1.png" class="img-fluid">
+                        <img src="assets/img/p1.png" class="img-fluid shadow mb-3">
                     </div>
                     <div class="col-lg-4">
-                        <img src="assets/img/p3.png" class="img-fluid">
+                        <a href="https://dribbble.com/shots/14166821-National-Accounting-Competition-Landing-Page"
+                            target="_blank">
+                            <img src="assets/img/p3.png" class="img-fluid shadow mb-3">
+                        </a>
                     </div>
+                </div>
+                <a href="https://dribbble.com/julianaputra10" class="btn btn-orange mt-5" target="_blank">Show More</a>
+            </div>
+        </section>
 
+        <section id="contact" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <h6 class="text-orange">CONTACT ME</h6>
+                        <h2 class="text-title font-weight-bold mb-5">Get in Touch</h2>
+                    </div>
+                    <div class="col-lg-6">
+                        <form action="mailto:garistanganid@gmail.com" method="post" enctype="text/plain">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" name="mail">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Message</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    name="comment"></textarea>
+                            </div>
+                            <input type="submit" class="btn btn-primary float-right btn-orange" value="Send Message">
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="my-5">
+        <section class="text-center bg-footer" id="footer">
             <div class="container">
-                <h6>CONTACT</h6>
-                <h3>Let's be Friends</h3>
-                <h4 class="text-white">I'm available for<br>freelancing project</h4>
-                <a class="btn btn-light" href="mailto:julianaputra10@gmail.com">Contact me</a>
+
+                <small class="copyright text-white">&copy; 2020 Juliana Putra</small>
             </div>
         </section>
-
-        <footer class="text-center" id="footer">
-            <div class="container">
-                <div class="copyright">&copy; 2020 Juliana Putra</div>
-            </div>
-        </footer>
 
     </div>
 
@@ -168,7 +194,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1200
+            duration: 800
         });
     </script>
 </body>

@@ -1,3 +1,32 @@
+.bg-primary {
+  background-color: #F1F4FB !important;
+}
+
+.bg-footer {
+  background-color: #0C0A5D;
+}
+
+.text-orange {
+  color: #FF9442 !important;
+  font-weight: bold;
+}
+
+.text-title {
+  color: #0C0A5D;
+  font-weight: 800;
+}
+
+.text-body {
+  color: #818181 !important;
+}
+
+.btn-orange {
+  background-color: #FF9442 !important;
+  border-color: #FF9442 !important;
+  color: #fff !important;
+  font-weight: 400;
+}
+
 section {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
@@ -22,19 +51,31 @@ html {
 
 html body {
   position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+html body nav {
+  max-width: 100vw;
 }
 
 html body #top {
-  background-color: #F6F6F6;
   position: relative;
+  padding-top: 100px;
 }
 
-html body #about {
-  background-color: #F6F6F6;
+html body #services .service-box {
+  margin-top: -30px;
+  z-index: 1;
 }
 
 html body #footer {
-  background-color: #F6F6F6;
   position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  html body #top {
+    padding-top: 40px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
