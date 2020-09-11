@@ -27,14 +27,20 @@
   font-weight: 400;
 }
 
+.title {
+  margin-bottom: 0;
+}
+
 section {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
 }
 
 .active {
-  background-color: #ffc107 !important;
+  color: #FF9442 !important;
   height: 100% !important;
+  background-color: #fff !important;
+  font-weight: bold;
 }
 
 .nav-link {
@@ -52,11 +58,7 @@ html {
 html body {
   position: relative;
   overflow-x: hidden;
-  max-width: 100vw;
-}
-
-html body nav {
-  max-width: 100vw;
+  max-width: 100vw !important;
 }
 
 html body #top {
@@ -64,9 +66,12 @@ html body #top {
   padding-top: 100px;
 }
 
+html body #services {
+  position: relative;
+}
+
 html body #services .service-box {
   margin-top: -30px;
-  z-index: 1;
 }
 
 html body #footer {

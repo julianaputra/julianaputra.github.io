@@ -1,6 +1,3 @@
-// Utility
-
-
 //Colors
 .bg-primary{
     background-color: #F1F4FB !important;
@@ -28,14 +25,20 @@
     font-weight: 400;
 }
 
+.title{
+    margin-bottom: 0;
+}
+
 section{
     padding-top: 50px !important;
     padding-bottom: 50px !important;
 }
 
 .active{
-    background-color: #ffc107 !important;
+   color: #FF9442 !important;
     height: 100% !important;
+    background-color: #fff !important;
+    font-weight: bold;
 }
 .nav-link{
     color:black;
@@ -50,19 +53,17 @@ html{
     body{
         position: relative;
         overflow-x: hidden;
-        max-width: 100vw;
-        nav{
-            max-width: 100vw;
-        }
+        max-width: 100vw !important;
         #top{
             position: relative;
             padding-top: 100px;
         }
         #services{
+            position: relative;
             .service-box{
                 margin-top: -30px;
-                z-index: 1;
-                // position: absolute;
+   
+                
                 // left: 50%;
                 // transform: translateX(-50%);
             }
