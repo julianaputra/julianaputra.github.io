@@ -27,6 +27,21 @@
   font-weight: 400;
 }
 
+.btn-outline-orange {
+  color: #FF9442 !important;
+  border-color: #FF9442 !important;
+}
+
+.btn-outline-orange:hover {
+  color: #fff !important;
+  background-color: #FF9442 !important;
+  border-color: #FF9442 !important;
+}
+
+.border-bottom {
+  border-bottom: 5px solid #FF9442 !important;
+}
+
 .title {
   margin-bottom: 0;
 }
@@ -49,6 +64,11 @@ section {
 
 .nav-link:hover {
   color: grey !important;
+}
+
+#portfolio .card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 html {
