@@ -2,244 +2,612 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juliana Putra | Web Designer</title>
-    <link rel="shortcut icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juliana Putra — Frontend Developer Leader</title>
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="" data-spy="scroll" data-target="#navbar">
+<body>
 
-    <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-white fixed-top">
-        <div class="container">
-            <a class="navbar-brand font-weight-bold text-orange" href="#top">{JP}</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse " id="navbarNavAltMarkup">
-                <ul class="nav nav-pills ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#top">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a class="navbar-brand-logo" href="#top">JP<span>.</span></a>
+      <button class="navbar-toggler" type="button" id="navToggler">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#top">About</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ── HERO ── -->
+  <header id="top">
+
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+
+    <div class="container hero-main-container">
+      <div class="hero-row">
+
+        <!-- Left: Content -->
+        <div class="hero-left">
+
+          <div class="hero-available" data-aos="fade-down" data-aos-duration="500">
+            <span class="hero-dot"></span>
+            Available for new opportunities
+          </div>
+
+          <h1 class="hero-name" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+            <span class="hn-first">Juliana</span>
+            <span class="hn-last">Putra<span class="hn-dot">.</span></span>
+          </h1>
+
+          <div class="hero-role-row" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
+            <span class="hero-role-text">Frontend Developer</span>
+            <span class="hero-role-pill">Leader</span>
+          </div>
+
+          <p class="hero-desc" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">
+            Results-driven frontend leader progressing from Junior to Team Lead in 4 years.
+            Passionate about scalable architecture, mentorship, and exceptional user experiences.
+          </p>
+
+          <div class="hero-ctas" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">
+            <a href="#" target="_blank" class="btn-primary-custom">
+              <i class="fas fa-file-arrow-down"></i> Download CV
+            </a>
+            <a href="https://www.linkedin.com/in/juliana-putra/" target="_blank" class="btn-outline-custom">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+
+          <div class="hero-stats" data-aos="fade-up" data-aos-duration="600" data-aos-delay="550">
+            <div class="hero-stat-item">
+              <div class="stat-num">4<span>+</span></div>
+              <div class="stat-label">Years Exp.</div>
             </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item">
+              <div class="stat-num">10<span>+</span></div>
+              <div class="stat-label">Devs Led</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item">
+              <div class="stat-num">3.97</div>
+              <div class="stat-label">GPA</div>
+            </div>
+          </div>
 
         </div>
-    </nav>
 
+        <!-- Right: Floating skill tags -->
+        <div class="hero-float-zone" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+          <div class="float-tag ft-1"><i class="fab fa-vuejs"></i> Vue.js</div>
+          <div class="float-tag ft-2"><i class="fab fa-react"></i> React.js</div>
+          <div class="float-tag ft-3"><i class="fab fa-js-square"></i> TypeScript</div>
+          <div class="float-tag ft-4">Nuxt.js</div>
+          <div class="float-tag ft-5">Next.js</div>
+          <div class="float-tag ft-6">Tailwind CSS</div>
+          <div class="float-tag ft-7">🧑‍💼 Team Lead</div>
+          <div class="float-tag ft-8">🎤 Speaker</div>
+          <div class="float-tag ft-9">Git / GitHub</div>
+          <div class="float-center-card">
+            <div class="fcc-icon">⚡</div>
+            <div class="fcc-label">4+ Years</div>
+            <div class="fcc-sub">Frontend Expert</div>
+          </div>
+        </div>
 
-    <div data-spy="scroll" data-target="#navbar" data-offset="0">
-        <header id="top" class="bg-primary">
-            <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-5" data-aos="fade-right">
-                        <h6 class="text-orange title">HELLO, I AM</h6>
-                        <h1 class="text-title title">Juliana Putra</h1>
-                        <h3 class="text-title font-weight-bold">Computer Science Student</h3>
-                        <p class="text-body py-3">Very interested in the development of website technology, especially the front-end. Love learning something new and not afraid to start from the beginning.</p>
-                        <a href="#portfolio" class="btn btn-orange mb-1" style="z-index: 999;">My Portfolio</a>
-                        <a href="https://drive.google.com/file/d/103of5VdxKM-s6f5vVpmGACQqyciY-9bS/view?usp=sharing" target="_blank" class="btn btn-outline-orange ml-2 mb-1">Show CV</a>
-                    </div>
-                    <div class="col-lg-5" data-aos="fade-left" data-aos-delay="500">
-                        <img class="mt-5 img-fluid hero-img" src="assets/img/profile.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <section id="services" class="p-relative p-0">
-            <div class="container">
-                <div class="row mx-1 p-4 p-lg-5 shadow rounded bg-white service-box">
-                    <div class="col-lg-4">
-                        <div class="row">
-                            <div class="col-lg-3 col-4">
-                                <img class="img-fluid w-100" src="assets/img/skills/2.svg" alt="">
-                            </div>
-                            <div class="col-8">
-                                <h6 class="card-title">Web Developing</h6>
-                                <p class="small  mb-4 mb-lg-0">HTML, CSS, JavaScript, Bootstrap, Tailwind, SASS, React, PHP, MySQL</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="row">
-                            <div class="col-lg-3 col-4">
-                                <img class="img-fluid w-100" src="assets/img/skills/3.svg" alt="">
-                            </div>
-                            <div class="col-8">
-                                <h6 class="card-title">Graphic Design</h6>
-                                <p class="small  mb-4 mb-lg-0">Adobe Photoshop, Adobe Illustrator, Corel Draw</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="row">
-                            <div class="col-lg-3 col-4">
-                                <img class="img-fluid w-100" src="assets/img/skills/1.svg" alt="">
-                            </div>
-                            <div class="col-8">
-                                <h6 class="card-title">UI/UX Design</h6>
-                                <p class="small mb-4 mb-lg-0">Figma, Adobe XD</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                   
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="text-center">
-            <div class="container py-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <h6 class="text-orange title">MY PORTFOLIO</h6>
-                        <h2 class="text-title font-weight-bold mb-5">My Latest Work</h2>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-4">
-                        <div class="card shadow text-left mb-3" data-aos="fade-up" data-aos-delay="0" data-aos-duration="900">
-                            <img src="assets/img/p2.png" class="img-fluid border-bottom">
-                            <div class="card-body">
-                                <h6 class="card-title">IntechFest Landing Page</h6>
-                                <span class="badge badge-secondary">UI/UX Design</span>
-                                <span class="badge badge-secondary">Front-End</span>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card shadow text-left mb-3"  data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
-                            <img src="assets/img/p1.png" class="img-fluid card-img-top border-bottom">
-                            <div class="card-body">
-                                <h6 class="card-title">UD. Made Wenten Inventory Web App</h6>
-                                <span class="badge badge-secondary">UI/UX Design</span>
-                                <span class="badge badge-secondary">Front-End</span>
-                            </div>
-                        </div> 
-                        
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card shadow text-left mb-3" data-aos="fade-up" data-aos-delay="600" data-aos-duration="300">
-                         
-                            <img src="assets/img/p3.png" class="img-fluid card-img-top border-bottom">
-                            <div class="card-body">
-                                <h6 class="card-title">National Accounting Competition Landing Page</h6>
-                                <span class="badge badge-secondary">UI/UX Design</span>
-                                <span class="badge badge-secondary">Front-End</span>
-                            </div>
-                        </div> 
-                        
-                    </div>
-                </div>
-                <a href="https://dribbble.com/julianaputra10" class="btn btn-orange mt-5" target="_blank">Show More</a>
-            </div>
-        </section>
-
-        <!-- <section id="portfolio" class="text-center bg-primary">
-            <div class="container py-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <h6 class="text-orange title">MY PORTFOLIO</h6>
-                        <h2 class="text-title font-weight-bold mb-5">My Latest Work</h2>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-4">
-                        <div class="card shadow text-left mb-3" data-aos="fade-up" data-aos-delay="0" data-aos-duration="900">
-                            <img src="assets/img/p2.png" class="img-fluid border-bottom">
-                            <div class="card-body">
-                                <h6 class="card-title">IntechFest Landing Page</h6>
-                                <span class="badge badge-secondary">UI/UX Design</span>
-                                <span class="badge badge-secondary">Front-End</span>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card shadow text-left mb-3"  data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
-                            <img src="assets/img/p1.png" class="img-fluid card-img-top border-bottom">
-                            <div class="card-body">
-                                <h6 class="card-title">UD. Made Wenten Inventory Web App</h6>
-                                <span class="badge badge-secondary">UI/UX Design</span>
-                                <span class="badge badge-secondary">Front-End</span>
-                            </div>
-                        </div> 
-                        
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card shadow text-left mb-3" data-aos="fade-up" data-aos-delay="600" data-aos-duration="300">
-                         
-                            <img src="assets/img/p3.png" class="img-fluid card-img-top border-bottom">
-                            <div class="card-body">
-                                <h6 class="card-title">National Accounting Competition Landing Page</h6>
-                                <span class="badge badge-secondary">UI/UX Design</span>
-                                <span class="badge badge-secondary">Front-End</span>
-                            </div>
-                        </div> 
-                        
-                    </div>
-                </div>
-                <a href="https://dribbble.com/julianaputra10" class="btn btn-orange mt-5" target="_blank">Show More</a>
-            </div>
-        </section> -->
-
-        <section id="contact" class="bg-primary">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h6 class="text-orange title">CONTACT ME</h6>
-                        <h2 class="text-title font-weight-bold mb-5">Get in Touch</h2>
-                    </div>
-                    <div class="col-lg-6">
-                        <form action="mailto:garistanganid@gmail.com" method="post" enctype="text/plain">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" name="mail">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-                                    anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Message</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                    name="comment"></textarea>
-                            </div>
-                            <input type="submit" class="btn btn-primary float-right btn-orange" value="Send Message">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="text-center bg-footer py-3" id="footer">
-            <div class="container">
-                <small class="copyright text-white">&copy; 2020 Juliana Putra</small>
-            </div>
-        </section>
-
+      </div>
     </div>
 
+    <!-- Scrolling marquee strip -->
+    <div class="hero-marquee-strip">
+      <div class="hero-marquee-track">
+        <span class="mq-item"><i class="fab fa-vuejs"></i> Vue.js</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item"><i class="fab fa-react"></i> React.js</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">Nuxt.js</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">Next.js</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">TypeScript</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">Tailwind CSS</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">Team Leadership</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item"><i class="fab fa-git-alt"></i> Git</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">Frontend Architecture</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">Mentoring</span>
+        <span class="mq-sep">✦</span>
+        <!-- duplicate for seamless loop -->
+        <span class="mq-item"><i class="fab fa-vuejs"></i> Vue.js</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item"><i class="fab fa-react"></i> React.js</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">Nuxt.js</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">Next.js</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">TypeScript</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">Tailwind CSS</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">Team Leadership</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item"><i class="fab fa-git-alt"></i> Git</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">Frontend Architecture</span>
+        <span class="mq-sep">✦</span>
+        <span class="mq-item">Mentoring</span>
+        <span class="mq-sep">✦</span>
+      </div>
+    </div>
 
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800
-        });
-    </script>
+  </header>
+
+
+  <!-- ── STATS BAR ── -->
+  <section id="about" class="section-stats">
+    <div class="stats-grid">
+      <div class="about-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="about-item-num">Vue<span>.js</span></div>
+        <div class="about-item-label">Primary Framework</div>
+      </div>
+      <div class="about-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="about-item-num">10<span>+</span></div>
+        <div class="about-item-label">Devs Mentored</div>
+      </div>
+      <div class="about-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="about-item-num">2<span>×</span></div>
+        <div class="about-item-label">Conference Speaker</div>
+      </div>
+      <div class="about-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="about-item-num">100<span>+</span></div>
+        <div class="about-item-label">Projects Reviewed</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-2col">
+
+        <div class="section-intro" data-aos="fade-right">
+          <span class="section-label">Career Journey</span>
+          <h2 class="section-heading">Work<br>Experience</h2>
+          <div class="divider-line"></div>
+          <p class="section-sub">
+            From writing my first line of HTML to leading a team of 10, every role has sharpened
+            both my technical depth and leadership instincts.
+          </p>
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="150">
+          <ul class="timeline">
+
+            <li class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-role">Frontend Developer Leader</span>
+                  <span class="timeline-period">2025 — Present</span>
+                </div>
+                <div class="timeline-company">PT Timedoor Indonesia</div>
+                <ul class="timeline-list">
+                  <li>Led a team of 10 frontend developers across the full development lifecycle of client-facing web
+                    applications.</li>
+                  <li>Set technical standards, conducted code reviews, and provided architectural guidance for scalable
+                    code.</li>
+                  <li>Collaborated with project managers and clients to translate business requirements into technical
+                    solutions.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-role">Senior Frontend Developer</span>
+                  <span class="timeline-period">2024 — 2025</span>
+                </div>
+                <div class="timeline-company">PT Timedoor Indonesia</div>
+                <ul class="timeline-list">
+                  <li>Developed and maintained complex UI components using modern JavaScript frameworks.</li>
+                  <li>Played a key role in architectural design focused on performance, reusability, and UX.</li>
+                  <li>Mentored junior developers to strengthen team capability and output quality.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-role">Coding Teacher</span>
+                  <span class="timeline-period">Jan — Sep 2023</span>
+                </div>
+                <div class="timeline-company">Timedoor Academy</div>
+                <ul class="timeline-list">
+                  <li>Conducted online and offline bootcamp sessions and regular programming classes.</li>
+                  <li>Reviewed assignments with constructive feedback; tracked student progress and motivation.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="timeline-role">Junior Frontend Developer</span>
+                  <span class="timeline-period">2021 — 2023</span>
+                </div>
+                <div class="timeline-company">PT Timedoor Indonesia</div>
+                <ul class="timeline-list">
+                  <li>Built web application features with HTML, CSS, JavaScript and frontend frameworks.</li>
+                  <li>Gained experience in Git version control and Agile collaboration.</li>
+                  <li>Assisted with bug fixes and cross-browser optimization.</li>
+                </ul>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="container">
+
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Toolkit</span>
+        <h2 class="section-heading">Skills &amp; Technologies</h2>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="skills-grid">
+
+        <div data-aos="fade-right" data-aos-delay="100">
+
+          <div class="skill-category">
+            <div class="skill-cat-label">Frameworks &amp; Libraries</div>
+            <div class="skill-tags">
+              <span class="skill-tag highlight"><i class="fab fa-vuejs"></i> Vue.js</span>
+              <span class="skill-tag highlight">Nuxt.js</span>
+              <span class="skill-tag highlight"><i class="fab fa-react"></i> React.js</span>
+              <span class="skill-tag highlight">Next.js</span>
+              <span class="skill-tag">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-label">Languages</div>
+            <div class="skill-tags">
+              <span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+              <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+              <span class="skill-tag"><i class="fab fa-python"></i> Python (Basic)</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-label">Tools &amp; Platforms</div>
+            <div class="skill-tags">
+              <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+              <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+              <span class="skill-tag">Webpack</span>
+              <span class="skill-tag">npm / Yarn</span>
+              <span class="skill-tag"><i class="fab fa-figma"></i> Figma (Basic)</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Notion</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-label">Databases</div>
+            <div class="skill-tags">
+              <span class="skill-tag">MongoDB (Basic)</span>
+              <span class="skill-tag">MySQL (Basic)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="200">
+          <div class="skills-sidebar-card">
+            <h5>Soft Skills</h5>
+            <div>
+              <span class="soft-skill-pill">Team Leadership</span>
+              <span class="soft-skill-pill">Mentoring</span>
+              <span class="soft-skill-pill">Public Speaking</span>
+              <span class="soft-skill-pill">Problem-Solving</span>
+              <span class="soft-skill-pill">Communication</span>
+              <span class="soft-skill-pill">Adaptability</span>
+              <span class="soft-skill-pill">Critical Thinking</span>
+              <span class="soft-skill-pill">Collaboration</span>
+            </div>
+            <hr class="contact-divider">
+            <h5 style="margin-bottom:1rem;">Languages</h5>
+            <div class="lang-row">
+              <span class="lang-name">Bahasa Indonesia</span>
+              <span class="lang-badge">Native</span>
+            </div>
+            <div class="lang-row">
+              <span class="lang-name">English</span>
+              <span class="lang-badge">Professional</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── EDUCATION ── -->
+  <section id="education">
+    <div class="container">
+
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Academic Background</span>
+        <h2 class="section-heading">Education</h2>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="edu-grid">
+
+        <div data-aos="fade-up" data-aos-delay="0">
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div>
+              <div class="edu-degree">S.Kom. — Bachelor of Computer Science</div>
+              <div class="edu-institution">Institut Bisnis dan Teknologi Indonesia (IBTI)</div>
+              <div class="edu-meta">
+                <span class="edu-meta-item"><i class="fas fa-calendar-alt"></i> 2023 – 2025</span>
+                <span class="gpa-badge">GPA 3.97 / 4.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="150">
+          <div class="edu-card">
+            <div class="edu-icon">📚</div>
+            <div>
+              <div class="edu-degree">A.Md. — Associate Degree</div>
+              <div class="edu-institution">Politeknik Negeri Bali</div>
+              <div class="edu-meta">
+                <span class="edu-meta-item"><i class="fas fa-calendar-alt"></i> 2018 – 2021</span>
+                <span class="gpa-badge">GPA 3.99 / 4.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── ACTIVITIES ── -->
+  <section id="activities">
+    <div class="container">
+
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Beyond the Code</span>
+        <h2 class="section-heading">Professional Activities</h2>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="activities-grid">
+
+        <div data-aos="fade-up" data-aos-delay="0">
+          <div class="activity-card">
+            <div class="activity-type">🎤 Speaker</div>
+            <div class="activity-title">Securing Micro Frontends with Firebase Auth</div>
+            <div class="activity-event">Google I/O Extended Bali 2025</div>
+            <span class="activity-date"><i class="fas fa-calendar"></i> August 2025</span>
+            <p class="activity-desc">Presented on "From Monolith to Modular: Securing Micro Frontends with Firebase
+              Authentication" to 100+ attendees. Facilitated an interactive Q&A session.</p>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div class="activity-card">
+            <div class="activity-type">⚖️ Judge</div>
+            <div class="activity-title">Web Design Competition Judge</div>
+            <div class="activity-event">INVENTION Udayana 2024</div>
+            <span class="activity-date"><i class="fas fa-calendar"></i> October 2024</span>
+            <p class="activity-desc">Evaluated 50+ web design projects on UX/UI, functionality, code quality, and
+              innovation. Provided constructive feedback to finalists.</p>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200">
+          <div class="activity-card">
+            <div class="activity-type">🎤 Speaker</div>
+            <div class="activity-title">Introduction to Web Components with Vue.js</div>
+            <div class="activity-event">Google Developer Student Clubs Bali Collabs</div>
+            <span class="activity-date"><i class="fas fa-calendar"></i> January 2024</span>
+            <p class="activity-desc">Presented "Pengenalan ke Web Component dengan Vue.js" to 50+ attendees, sharing
+              best practices and facilitating hands-on discussion.</p>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="300">
+          <div class="activity-card">
+            <div class="activity-type">⚖️ Judge</div>
+            <div class="activity-title">Web Design Competition Judge</div>
+            <div class="activity-event">INVENTION Udayana 2023</div>
+            <span class="activity-date"><i class="fas fa-calendar"></i> October 2023</span>
+            <p class="activity-desc">Evaluated 50+ web design projects on UX/UI, functionality, code quality, and
+              innovation. Provided detailed improvement recommendations to finalists.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="container">
+
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-heading">Let's Connect</h2>
+        <div class="divider-line"></div>
+      </div>
+
+      <div class="contact-grid">
+
+        <div data-aos="fade-right" data-aos-delay="100">
+          <div class="contact-info-card">
+            <h3>Say Hello.</h3>
+            <p>Open to new opportunities, collaborations, and conversations about frontend engineering.</p>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-value">
+                  <a href="mailto:julianaputra10@gmail.com">julianaputra10@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <div class="contact-item-label">Phone</div>
+                <div class="contact-item-value">
+                  <a href="tel:+6285156714939">(+62) 851-5671-4939</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <div class="contact-item-label">Location</div>
+                <div class="contact-item-value">Denpasar, Bali, Indonesia</div>
+              </div>
+            </div>
+
+            <hr class="contact-divider">
+
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/juliana-putra/" target="_blank" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/" target="_blank" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="200">
+          <div class="contact-form-card">
+            <form action="mailto:julianaputra10@gmail.com" method="post" enctype="text/plain">
+              <div class="form-row">
+                <div>
+                  <label class="form-label-custom">Name</label>
+                  <input type="text" class="form-control-custom" placeholder="Your name" name="name">
+                </div>
+                <div>
+                  <label class="form-label-custom">Email</label>
+                  <input type="email" class="form-control-custom" placeholder="your@email.com" name="mail">
+                </div>
+              </div>
+              <label class="form-label-custom">Subject</label>
+              <input type="text" class="form-control-custom" placeholder="What's this about?" name="subject">
+              <label class="form-label-custom">Message</label>
+              <textarea class="form-control-custom" placeholder="Tell me more…" name="comment"></textarea>
+              <div style="text-align:right;">
+                <button type="submit" class="btn-primary-custom">
+                  Send Message <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── FOOTER ── -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">JP<span>.</span></div>
+        <div class="footer-copy">&copy; 2026 Juliana Putra — Frontend Developer Leader</div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 60 });
+
+    // Active nav on scroll
+    const sections = document.querySelectorAll('section[id], header[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function setActive() {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 100) current = sec.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+      });
+    }
+    window.addEventListener('scroll', setActive);
+    setActive();
+
+    // Mobile nav toggle
+    const toggler = document.getElementById('navToggler');
+    const navMenu = document.getElementById('navMenu');
+
+    toggler.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => navMenu.classList.remove('open'));
+    });
+  </script>
+
 </body>
 
 </html>
