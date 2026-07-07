@@ -28,6 +28,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -214,10 +215,11 @@ section {
   right: 0;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   height: 64px;
+  will-change: transform;
 }
 
 .nav-inner {
@@ -295,9 +297,10 @@ section {
 .hero-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
+  filter: blur(65px);
   pointer-events: none;
   z-index: 0;
+  will-change: transform;
 }
 .hero-blob-1 {
   width: 560px; height: 560px;
@@ -339,11 +342,11 @@ section {
   align-items: center;
   gap: 3rem;
   min-height: calc(100vh - 64px - 52px); /* minus marquee */
-  padding: 60px 0 40px;
+  padding: 40px 0 40px;
 }
 
 .hero-left {
-  flex: 0 0 58%;
+  flex: 0 0 50%;
   min-width: 0;
 }
 
@@ -447,10 +450,23 @@ section {
 /* Stats */
 .hero-stats {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  row-gap: 1rem;
   gap: 0;
 }
-.hero-stat-item { padding-right: 2rem; }
+.hero-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 2rem;
+}
+.stat-icon {
+  font-size: 1.2rem;
+  color: var(--navy);
+  opacity: 0.55;
+  flex-shrink: 0;
+}
 .hero-stat-divider {
   width: 1px;
   height: 36px;
@@ -485,10 +501,11 @@ section {
   height: 520px;
   align-items: center;
   justify-content: center;
+  container-type: inline-size;
 }
 
 .float-tag {
-  position: absolute;
+  position: relative;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 50px;
@@ -501,6 +518,8 @@ section {
   display: flex;
   align-items: center;
   gap: 7px;
+  --rot: 0deg;
+  transform: rotate(var(--rot));
   animation: floatY 4s ease-in-out infinite;
   transition: box-shadow 0.2s, transform 0.2s;
   cursor: default;
@@ -508,59 +527,129 @@ section {
 }
 .float-tag:hover {
   box-shadow: 0 8px 30px rgba(12,10,93,0.15);
-  transform: translateY(-4px) scale(1.04) !important;
+  transform: translateY(-4px) scale(1.04) rotate(0deg) !important;
 }
 .float-tag i { color: var(--orange); }
 
-/*
-  Float zone is ~42% of 1180px container ≈ 496px wide × 520px tall.
-  Center card sits at 50%/50% (≈248px, 260px center), ~130×100px footprint.
-  Left column: tags anchored left edge.
-  Right column: tags anchored right edge.
-  Bottom: one centered tag.
-*/
-
-/* Left column */
-.ft-1 { top:  3%; left:  3%; animation-delay: 0.0s; } /* Vue.js      */
-.ft-8 { top: 23%; left:  5%; animation-delay: 1.1s; } /* Speaker     */
-.ft-9 { top: 44%; left:  1%; animation-delay: 0.4s; } /* Git/GitHub  */
-.ft-7 { top: 65%; left:  3%; animation-delay: 0.7s; } /* Team Lead   */
-
-/* Right column */
-.ft-2 { top:  8%; right: 3%; animation-delay: 0.5s; } /* React.js    */
-.ft-3 { top: 28%; right: 2%; animation-delay: 1.0s; } /* TypeScript  */
-.ft-4 { top: 48%; right: 4%; animation-delay: 0.3s; } /* Nuxt.js     */
-.ft-5 { top: 67%; right: 3%; animation-delay: 0.8s; } /* Next.js     */
-
-/* Bottom center */
-.ft-6 { top: 85%; left: 33%; animation-delay: 1.3s; } /* Tailwind    */
-
 @keyframes floatY {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0) rotate(var(--rot)); }
+  50%       { transform: translateY(-10px) rotate(var(--rot)); }
 }
 
-/* Center card — uses its own keyframe to preserve the centering transform */
-.float-center-card {
+/*
+  Tags orbit the photo on a true circle: each tag is wrapped in an
+  .orbit-slot that places it at --angle (clockwise from 12 o'clock) and
+  --r (px from center), using the rotate/translate/counter-rotate trick
+  so the tag itself stays upright. The float-tag's own transform (bob +
+  slight rotation jitter) is independent, so the two never fight.
+*/
+.orbit-slot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--angle))
+    translateY(calc(-1 * var(--r)))
+    rotate(calc(-1 * var(--angle)));
+}
+
+/* --r uses clamp(floor, container-relative, ceiling) so the orbit shrinks
+   gracefully as the float zone narrows and stops growing once the zone
+   hits its container max-width, instead of tracking raw viewport width */
+.os-1 { --angle: 342deg; --r: clamp(146px, 38.6cqw, 200px); }
+.os-2 { --angle:  22deg; --r: clamp(153px, 40.5cqw, 210px); }
+.os-3 { --angle:  64deg; --r: clamp(150px, 39.6cqw, 205px); }
+.os-4 { --angle: 106deg; --r: clamp(153px, 40.5cqw, 210px); }
+.os-5 { --angle: 148deg; --r: clamp(142px, 37.6cqw, 195px); }
+.os-6 { --angle: 188deg; --r: clamp(150px, 39.6cqw, 205px); }
+.os-7 { --angle: 226deg; --r: clamp(153px, 40.5cqw, 210px); }
+.os-8 { --angle: 306deg; --r: clamp(150px, 39.6cqw, 205px); }
+.os-9 { --angle: 268deg; --r: clamp(146px, 38.6cqw, 200px); }
+.os-badge { --angle: 158deg; --r: clamp(96px, 25.5cqw, 132px); z-index: 3; }
+
+.ft-1 { --rot: -4deg; animation-delay: 0.0s; } /* Vue.js      */
+.ft-2 { --rot:  4deg; animation-delay: 0.5s; } /* React.js    */
+.ft-3 { --rot: -3deg; animation-delay: 1.0s; } /* TypeScript  */
+.ft-4 { --rot:  2deg; animation-delay: 0.3s; } /* Nuxt.js     */
+.ft-5 { --rot: -4deg; animation-delay: 0.8s; } /* Next.js     */
+.ft-6 { --rot:  3deg; animation-delay: 1.3s; } /* Tailwind    */
+.ft-7 { --rot:  4deg; animation-delay: 0.7s; } /* Team Lead   */
+.ft-8 { --rot:  3deg; animation-delay: 1.1s; } /* Speaker     */
+.ft-9 { --rot: -2deg; animation-delay: 0.4s; } /* Git/GitHub  */
+
+/* Decorative dashed orbits behind the photo, echoing a satellite system */
+.orbit-ring {
   position: absolute;
   top: 50%; left: 50%;
-  background: var(--navy);
-  border-radius: 20px;
-  padding: 24px 28px;
-  text-align: center;
-  box-shadow: 0 12px 40px rgba(12,10,93,0.22);
+  border: 1px dashed var(--border);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+.orbit-ring-1 { width: 55%; aspect-ratio: 1; }
+.orbit-ring-2 { width: 82%; aspect-ratio: 1; opacity: 0.6; }
+
+.orbit-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+  z-index: 0;
+}
+.orbit-dot.muted { background: var(--border); }
+.od-1 { top: 6%;  left: 47%; }
+.od-2 { top: 48%; left: 0%; }
+.od-3 { top: 80%; left: 90%; }
+.od-4 { top: 15%; left: 88%; }
+
+/* Center photo — uses its own keyframe to preserve the centering transform */
+.hero-photo-frame {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: clamp(190px, 20vw, 230px);
+  height: clamp(190px, 20vw, 230px);
+  border-radius: 50%;
+  padding: 6px;
+  background: var(--white);
+  box-shadow: 0 16px 44px rgba(12,10,93,0.22), 0 0 0 1px var(--border);
   animation: floatCenter 5s ease-in-out infinite;
   animation-delay: 0.4s;
+  z-index: 2;
+}
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--orange);
 }
 
 @keyframes floatCenter {
   0%, 100% { transform: translate(-50%, -50%) translateY(0); }
   50%       { transform: translate(-50%, -50%) translateY(-10px); }
 }
-.fcc-icon { font-size: 2rem; margin-bottom: 6px; }
+
+/* Small stat badge — sits in its own orbit-slot (.os-badge) just off the
+   photo's bottom-right edge, inside the tag ring */
+.float-badge {
+  position: relative;
+  background: var(--navy);
+  border-radius: 16px;
+  padding: 14px 18px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(12,10,93,0.25);
+  animation: floatY 4s ease-in-out infinite;
+  animation-delay: 0.9s;
+}
+.fcc-icon { font-size: 1.4rem; margin-bottom: 4px; }
 .fcc-label {
   font-family: 'Fraunces', serif;
-  font-size: 1.6rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--white);
   line-height: 1;
@@ -775,7 +864,7 @@ section {
    SKILLS
 ─────────────────────────────────────── */
 #skills {
-  background: var(--white);
+  background: var(--bg-soft);
 }
 
 .skill-category {
@@ -883,7 +972,7 @@ section {
    EDUCATION
 ─────────────────────────────────────── */
 #education {
-  background: var(--bg-soft);
+  background: var(--white);
 }
 
 .edu-card {
@@ -958,7 +1047,6 @@ section {
   background: var(--bg-soft);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.6rem;
   height: 100%;
   transition: box-shadow var(--transition), transform var(--transition);
   position: relative;
@@ -975,12 +1063,33 @@ section {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
+  z-index: 1;
 }
 .activity-card:hover {
   box-shadow: 0 8px 32px rgba(12,10,93,0.08);
   transform: translateY(-3px);
 }
 .activity-card:hover::before { transform: scaleX(1); }
+
+.activity-media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--border);
+}
+.activity-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.activity-card:hover .activity-media img {
+  transform: scale(1.04);
+  filter: grayscale(0);
+}
+
+.activity-body { padding: 1.6rem; }
 
 .activity-type {
   font-size: 0.72rem;
