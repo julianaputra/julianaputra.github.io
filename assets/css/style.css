@@ -887,6 +887,42 @@ section {
   gap: 8px;
 }
 
+/*
+  Brand marks Font Awesome's free set doesn't cover. Rendered via
+  mask-image + background-color:currentColor (not <img>) so they inherit
+  color exactly like Font Awesome glyphs — same navy/orange default,
+  same white-on-hover swap, no separate color to keep in sync.
+*/
+.brand-icon {
+  display: inline-block;
+  width: 0.95em;
+  height: 0.95em;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  vertical-align: -0.12em;
+  flex-shrink: 0;
+}
+.bi-nuxt     { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/nuxtdotjs.svg');        mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/nuxtdotjs.svg'); }
+.bi-next     { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/nextdotjs.svg');        mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/nextdotjs.svg'); }
+.bi-tailwind { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/tailwindcss.svg');      mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/tailwindcss.svg'); }
+.bi-ts       { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/typescript.svg');       mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/typescript.svg'); }
+.bi-shopify  { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/shopify.svg');          mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/shopify.svg'); }
+.bi-graphql  { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/graphql.svg');          mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/graphql.svg'); }
+.bi-pinia    { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/pinia.svg');            mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/pinia.svg'); }
+.bi-zustand  { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/zustand.svg');          mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/zustand.svg'); }
+.bi-strapi   { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/strapi.svg');           mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/strapi.svg'); }
+.bi-claude   { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/claude.svg');           mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/claude.svg'); }
+.bi-npm      { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/npm.svg');              mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/npm.svg'); }
+.bi-vscode   { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/visualstudiocode.svg'); mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/visualstudiocode.svg'); }
+.bi-notion   { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/notion.svg');           mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/notion.svg'); }
+.bi-mongodb  { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/mongodb.svg');          mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/mongodb.svg'); }
+.bi-mysql    { -webkit-mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/mysql.svg');            mask-image: url('https://cdn.jsdelivr.net/npm/simple-icons@13/icons/mysql.svg'); }
+
 .skill-tag {
   display: inline-flex;
   align-items: center;
